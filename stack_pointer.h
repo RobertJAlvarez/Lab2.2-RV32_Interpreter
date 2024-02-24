@@ -4,12 +4,12 @@
 #include <stddef.h>
 
 typedef struct {
-  unsigned char *sp;
+  unsigned char *p;
   size_t size;
 } sp_t;
 
 /* Get new stack with initially 0 memory. */
-sp_t *init(void);
+sp_t *sp_init(void);
 
 /* Add some memory to the stack pointer. */
 int sp_add_mem(sp_t *, size_t);

@@ -1,29 +1,25 @@
 #include <errno.h>   //errno
-#include <stdint.h>  // int32_t
-#include <stdio.h>   // printf()
-#include <stdlib.h>  // malloc() & free()
+#include <stdint.h>  //int32_t
+#include <stdio.h>   //printf() fprintf()
+#include <stdlib.h>  //malloc() & free()
 
-#include "StackPointer.h"
 #include "my_string.h"
+#include "stack_pointer.h"
 #include "tokenizer.h"
 
 #define N_REGISTERS ((size_t)32)
 
 int32_t *r;
 
-static int error_no_memory(void) {
+static void error_no_memory(void) {
   fprintf(stderr, "No more memory available. Errorno: %d\n", errno);
-  return 1;
+  return;
 }
 
-/* Do not alter this function! */
 int init_regs(void) {
-  r = malloc(N_REGISTERS * sizeof(int32_t));
+  // TODO: Make space and initialize registers 0
 
-  if (r == NULL) return error_no_memory();
-  for (size_t i = 0; i < N_REGISTERS; i++) r[i] = ((int32_t)0);
-
-  return 0;
+  return 1;
 }
 
 /**
@@ -32,15 +28,25 @@ int init_regs(void) {
  * instruction string will be passed as a parameter to this function.
  */
 int interpret(char *instr) {
-  /* Your code starts here. */
+  // TODO: Parse instr
+
+  // TODO: Interpret the instruction
 
   return 1;
 }
 
-int main(void) {
-  if (init_regs()) return 1;
+int main(int argc, char **argv) {
+  // TODO: Print an error and fail if the # of arguments is not 2
 
-  /* Your code starts here. */
+  // TODO: Initialize register (check for failure)
 
-  return 0;
+  // TODO: Open the file pass (second argument)
+
+  // TODO: For each line in the file, interpret it
+
+  // TODO: Close the file
+
+  // TODO: Free all memory from heap
+
+  return 1;
 }
