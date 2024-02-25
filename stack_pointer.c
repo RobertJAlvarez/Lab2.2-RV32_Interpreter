@@ -12,16 +12,9 @@ sp_t *init(void) {
   return NULL;
 }
 
-int sp_add_mem(sp_t *sp, size_t n) {
+int sp_add_mem(sp_t *sp, ssize_t n) {
   // TODO: Add n memory to sp
   // NOTE: The p pointer could be empty
-
-  return 1;
-}
-
-int sp_sub_mem(sp_t *sp, size_t n) {
-  // TODO: Subtract n memory to sp
-  // NOTE: if size goes back to zero free the p pointer in sp
 
   return 1;
 }
